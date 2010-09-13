@@ -1,3 +1,6 @@
 [submodule "Source/External/asihttprequest"]
 	path = Source/External/asihttprequest
 	url = http://github.com/pokeb/asi-http-request.git
+[submodule "Source/External/KissXML"]
+	path = Source/External/KissXML
+	url = git://github.com/CIM/KissXML.git
