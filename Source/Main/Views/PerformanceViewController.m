@@ -60,6 +60,10 @@
 	
 	// XML
 	[self.xmlController resetView];
+	
+	// JSON
+	[PerformanceServices sharedPerformanceServices].managedObjectContext = self.managedObjectContext;
+	[[PerformanceServices sharedPerformanceServices] downloadPeopleUsingFormat:JSONFormat];
 }
 
 - (void)performanceFinishedDownloadingForFormat:(id)sender
