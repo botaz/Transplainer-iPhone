@@ -1,7 +1,7 @@
 #import "RootViewController.h"
 
 
-@implementation EnvisionAppDelegate
+@implementation AppDelegate
 
 @synthesize window;
 @synthesize navigationController;
