@@ -87,10 +87,18 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(PerformanceServices)
 		
 		NSDate *now = [NSDate date];
 		
-		// Here we should parse json
 		NSError *error = nil;
+		NSString *format = [info valueForKey:@"object"];
+		if ([format isEqualToString:@"XML"]) {
+			
+		} else if ([format isEqualToString:@"JSON"]) {
+			
+		} else if ([format isEqualToString:@"PLIST"]) {
+			
+		}
+		
 		SBJSON *json = [[[SBJSON alloc]init] autorelease];
-		NSArray *people = (NSArray *)[[json objectWithString:responseString error:&error]valueForKey:@"campaigns"];
+		NSArray *people = (NSArray *)[[json objectWithString:responseString error:&error]valueForKey:@"people"];
 		
 		if (!error) {
 			for (NSDictionary *personDict in people) {

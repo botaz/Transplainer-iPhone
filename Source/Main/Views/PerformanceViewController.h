@@ -11,6 +11,8 @@
 	PerformanceElementViewController *_xmlController;
 	PerformanceElementViewController *_jsonController;
 	PerformanceElementViewController *_plistController;
+	
+	NSManagedObjectContext *_managedObjectContext;
 }
 
 
@@ -23,6 +25,8 @@
 @property (nonatomic, retain) IBOutlet PerformanceElementViewController *xmlController;
 @property (nonatomic, retain) IBOutlet PerformanceElementViewController *jsonController;
 @property (nonatomic, retain) IBOutlet PerformanceElementViewController *plistController;
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)startDownloading:(id)sender;
 

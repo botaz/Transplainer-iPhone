@@ -1,4 +1,4 @@
-#import "RootViewController.h"
+#import "PerformanceViewController.h"
 
 
 @implementation AppDelegate
@@ -12,8 +12,8 @@
 
 - (void)awakeFromNib {    
     
-    RootViewController *rootViewController = (RootViewController *)[navigationController topViewController];
-    rootViewController.managedObjectContext = self.managedObjectContext;
+    PerformanceViewController *performanceViewController = (PerformanceViewController *)[navigationController topViewController];
+    performanceViewController.managedObjectContext = self.managedObjectContext;
 }
 
 

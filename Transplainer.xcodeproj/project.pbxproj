@@ -30,7 +30,6 @@
 		3A57FE3411FFB1F300248D1D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A57FE3311FFB1F300248D1D /* SystemConfiguration.framework */; };
 		3A57FE3611FFB1F300248D1D /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A57FE3511FFB1F300248D1D /* libz.1.2.3.dylib */; };
 		3A57FFAD11FFB24F00248D1D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A57FED911FFB24F00248D1D /* MainWindow.xib */; };
-		3A57FFAF11FFB24F00248D1D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A57FEDB11FFB24F00248D1D /* Settings.bundle */; };
 		3A57FFCA11FFB24F00248D1D /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A57FF0A11FFB24F00248D1D /* ASIAuthenticationDialog.m */; };
 		3A57FFCB11FFB24F00248D1D /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A57FF0D11FFB24F00248D1D /* ASIDownloadCache.m */; };
 		3A57FFCC11FFB24F00248D1D /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A57FF0F11FFB24F00248D1D /* ASIFormDataRequest.m */; };
@@ -64,6 +63,7 @@
 		3A78A9C1123E5C31001F4A06 /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A78A9C0123E5C31001F4A06 /* libxml2.2.7.3.dylib */; };
 		3A78A9D3123E5D31001F4A06 /* PerformanceElementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A78A9D1123E5D31001F4A06 /* PerformanceElementView.xib */; };
 		3A78A9D4123E5D31001F4A06 /* PerformanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A78A9D2123E5D31001F4A06 /* PerformanceView.xib */; };
+		3A78A9E7123E6233001F4A06 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A78A9E6123E6233001F4A06 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,7 +86,6 @@
 		3A57FE3511FFB1F300248D1D /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		3A57FED511FFB24F00248D1D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A57FED911FFB24F00248D1D /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		3A57FEDB11FFB24F00248D1D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		3A57FF0911FFB24F00248D1D /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		3A57FF0A11FFB24F00248D1D /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		3A57FF0B11FFB24F00248D1D /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +160,7 @@
 		3A78A9C0123E5C31001F4A06 /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
 		3A78A9D1123E5D31001F4A06 /* PerformanceElementView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerformanceElementView.xib; sourceTree = "<group>"; };
 		3A78A9D2123E5D31001F4A06 /* PerformanceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerformanceView.xib; sourceTree = "<group>"; };
+		3A78A9E6123E6233001F4A06 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,7 +249,6 @@
 				3A57FED911FFB24F00248D1D /* MainWindow.xib */,
 				3A78A9D1123E5D31001F4A06 /* PerformanceElementView.xib */,
 				3A78A9D2123E5D31001F4A06 /* PerformanceView.xib */,
-				3A57FEDB11FFB24F00248D1D /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -257,6 +256,7 @@
 		3A57FED811FFB24F00248D1D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3A78A9E6123E6233001F4A06 /* background.png */,
 				3A78A899123E4CE7001F4A06 /* performance_black_status.png */,
 				3A78A89A123E4CE7001F4A06 /* performance_element_background.png */,
 				3A78A89B123E4CE7001F4A06 /* performance_final_time_background.png */,
@@ -517,7 +517,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A57FFAD11FFB24F00248D1D /* MainWindow.xib in Resources */,
-				3A57FFAF11FFB24F00248D1D /* Settings.bundle in Resources */,
 				3A78A8A4123E4CE7001F4A06 /* performance_black_status.png in Resources */,
 				3A78A8A5123E4CE7001F4A06 /* performance_element_background.png in Resources */,
 				3A78A8A6123E4CE7001F4A06 /* performance_final_time_background.png in Resources */,
@@ -531,6 +530,7 @@
 				3A78A8AE123E4CE7001F4A06 /* performance_time_background.png in Resources */,
 				3A78A9D3123E5D31001F4A06 /* PerformanceElementView.xib in Resources */,
 				3A78A9D4123E5D31001F4A06 /* PerformanceView.xib in Resources */,
+				3A78A9E7123E6233001F4A06 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

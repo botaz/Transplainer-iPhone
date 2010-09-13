@@ -10,6 +10,7 @@
 @synthesize jsonController=_jsonController;
 @synthesize plistController=_plistController;
 @synthesize scrollView=_scrollView;
+@synthesize managedObjectContext=_managedObjectContext;
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -135,6 +136,8 @@
 
 - (void)dealloc {
 	[[NSNotificationCenter defaultCenter]removeObserver:self];
+	
+	[_managedObjectContext release];
 	[_scrollView release];
 	[_plistController release];
 	[_xmlController release];
