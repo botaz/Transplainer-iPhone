@@ -4,3 +4,6 @@
 [submodule "Source/External/KissXML"]
 	path = Source/External/KissXML
 	url = git://github.com/CIM/KissXML.git
+[submodule "Source/External/yamlkit"]
+	path = Source/External/yamlkit
+	url = git://github.com/patrickt/yamlkit.git
