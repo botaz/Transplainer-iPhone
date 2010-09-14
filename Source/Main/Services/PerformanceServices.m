@@ -1,5 +1,6 @@
 #import "PerformanceServices.h"
 #import "SBJSON.h"
+#import "DDXML.h"
 #import "Person.h"
 
 @interface PerformanceServices (private)
@@ -82,35 +83,33 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(PerformanceServices)
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:PerformanceFinishedDownloadingForFormat object:[info valueForKey:@"object"]];
 	
-	NSString *responseString = [request responseString];
-	if ([responseString length] != 0)  {
-		
-		NSDate *now = [NSDate date];
-		
-		NSError *error = nil;
+	if (!request.error)  {
+		NSArray *people = nil;
 		NSString *format = [info valueForKey:@"object"];
 		if ([format isEqualToString:@"XML"]) {
-			
+			DDXMLDocument *xmlDocument = [[DDXMLDocument alloc]initWithData:[request responseData] options:0 error:nil];
+			people = [xmlDocument nodesForXPath:@"./people/person[1]/person" error:nil];
 		} else if ([format isEqualToString:@"JSON"]) {
-			
+			SBJSON *json = [[[SBJSON alloc]init] autorelease];
+			people = (NSArray *)[[json objectWithString:[request responseString] error:nil]valueForKey:@"people"];
 		} else if ([format isEqualToString:@"PLIST"]) {
-			
+			people = [NSPropertyListSerialization propertyListFromData:[request responseData]
+													  mutabilityOption:NSPropertyListImmutable
+																format:NULL
+													  errorDescription:NULL];
 		}
 		
-		SBJSON *json = [[[SBJSON alloc]init] autorelease];
-		NSArray *people = (NSArray *)[[json objectWithString:responseString error:&error]valueForKey:@"people"];
-		
-		if (!error) {
-			for (NSDictionary *personDict in people) {
-				Person *person = [Person personWithDictionary:personDict managedObjectContext:self.managedObjectContext];
-				person.lastModified = now;
-			}
+		if (people && people.count > 0) {
+			DLog(@"%@", people);
+//			NSDate *now = [NSDate date];
+			//for (NSDictionary *personDict in people) {
+//				Person *person = [Person personWithDictionary:personDict managedObjectContext:self.managedObjectContext];
+//				person.lastModified = now;
+//			}
 		}
 		
 		[[NSNotificationCenter defaultCenter] postNotificationName:PerformanceFinishedParsingForFormat object:[info valueForKey:@"object"]];
 	}
-	
-	// should refetch content
 	
 	DLog(@"fetch complete");
 }

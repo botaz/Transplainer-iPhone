@@ -36,8 +36,6 @@
 	[self.scrollView addSubview:self.xmlController.view];
 	[self.xmlController viewDidLoad];
 	
-	
-	
 	[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(performanceFinishedDownloadingForFormat:) name:PerformanceFinishedDownloadingForFormat object:nil];
 	[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(performanceFinishedParsingForFormat:) name:PerformanceFinishedParsingForFormat object:nil];
 	
